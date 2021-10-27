@@ -45,14 +45,14 @@ If you open your browser in developer mode, you will see the following error in 
 
 `Access to XMLHttpRequest at 'https://cwfis.cfs.nrcan.gc.ca/geoserver/public/wms?SERVICE=WMS&REQUEST=GetCapabilities' from origin 'https://esrica-ncr.maps.arcgis.com' has been blocked by CORS policy: The value of the 'Access-Control-Allow-Origin' header in the response must not be the wildcard '*' when the request's credentials mode is 'include'. The credentials mode of requests initiated by the XMLHttpRequest is controlled by the withCredentials attribute.`
 
-![Add WMS Error](images/wms-error.png) 
+![Add WMS Error](images%2Fwms-error.PNG) 
 
 
 # Try loading the WMS in the classic API's
 
 Register the parent directory of this read me in IIS. In my case, I have added a virtual directory called `wms` that points to the location of this repository.
 
-![Add WMSA Service](images/iis-wms.png) 
+![Add WMSA Service](images%2Fiis-wms.PNG) 
 
 
 You can see that the WMS we used in the map viewer works fine with the API. We'have just taken defaut sample and pointed them to your WMS Service.
@@ -63,7 +63,7 @@ You can see that the WMS we used in the map viewer works fine with the API. We'h
 
 ## http://localhost/wms/3/
 
-![WMS Service JS3](images/sample-js3.png) 
+![WMS Service JS3](images%2Fsample-js3.PNG) 
 
 The sample used for API 3 is coming from there. https://developers.arcgis.com/javascript/3/jssamples/layers_wmsresourceinfo.html. The initial sample has vanilla setting.
 
@@ -71,7 +71,7 @@ The same result can be observed when I use the same CORS setting than the ArcGIS
 
 ## http://localhost/wms/4/
 
-![WMS Service JS4](images/sample-js4.png) 
+![WMS Service JS4](images%2Fsample-js4.PNG) 
 
 Sample for WMS Layer using JS4: https://developers.arcgis.com/javascript/latest/sample-code/sandbox/?sample=layers-wms 
 
