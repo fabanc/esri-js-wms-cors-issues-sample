@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>WMSLayer | Sample | ArcGIS API for JavaScript 4.19</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.21/"></script>
+
+    <script>
+      require(["esri/Map", "esri/views/MapView", "esri/layers/WMSLayer", "esri/layers/TileLayer"], function(Map, MapView, WMSLayer, TileLayer) {
+        
+        const wmsUrl = "https://cwfis.cfs.nrcan.gc.ca/geoserver/public/wms?service=WMS"
+        const layer = new WMSLayer(wmsUrl, {
+            sublayers: [
+                {
+                    name: "fdr_current_shp",
+                    title: "FDR",
+                    description: "FDR"
+                }
+            ],
+            copyright: '<a href="https://eccc-msc.github.io/open-data/licence/readme_en/">ECCC</a>',
+            description: "radarWMS",
+            title: "Radar PN",
+            version: "1.3.0"
+        });        
+		
+		
+		let tileLayer = new TileLayer({
+			url: "https://geo.apca2.gc.ca/arcserver/rest/services/National_Cache_36M_to_250/MapServer"
+		});	
+
+    const map = new Map({
+		  basemap: "streets-vector"
+    });
+		
+		map.add(layer)
+
+        const view = new MapView({
+          container: "viewDiv",
+          map: map
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
