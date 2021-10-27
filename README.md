@@ -39,7 +39,7 @@ In ArcGIS Online, go into your organization settings.
   * In the drop drown menu, select `A WMS OGC Service`
   * Copy and Paste the URL `https://cwfis.cfs.nrcan.gc.ca/geoserver/public/wms?service=WMS`
 
-  ![Add WMS Service](images/add-wms.png) 
+  ![AddWMSService](images/add-wms.png) 
 
 If you open your browser in developer mode, you will see the following error in your Chrome browser. The error should be the following:
 
