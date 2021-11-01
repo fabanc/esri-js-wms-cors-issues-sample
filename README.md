@@ -8,7 +8,7 @@ When loading a WMS layer in MapViewer (classic), the viewer returns an exception
 
 The WMS service used for this test case: https://cwfis.cfs.nrcan.gc.ca/geoserver/public/wms?service=WMS
 
-This business case used to work on older versions of ArcGIS Online and ArcGIS Enterprise.
+This business case used to work on older versions of ArcGIS Online. It still works in our Portal (10.8.1)
 
 ## Requirements
 
